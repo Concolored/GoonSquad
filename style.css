@@ -1,0 +1,232 @@
+/*Igual con este, a pesar de que prácticamente le dediqué medio día a ambos*/
+body {
+  background: #202124;
+  margin: 0;
+  padding: 0;
+}
+
+/** Si estás confundido con algunas propiedades, juega este juego http://flexboxfroggy.com/ , aprenderás un par de cosas **/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* transform: translate(50%,0px); */
+  padding-top: 14px;
+  padding-bottom: 5px;
+  height: 5%;
+}
+
+#logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 82px;
+  -webkit-transition: width 1s ease-in;
+  -moz-transition: width 1s ease-in;
+  -o-transition: width 1s ease-in;
+  transition: width 1s ease-in;
+}
+
+#logo:hover {
+  width: 82px;
+  -webkit-transition: width 1s ease-out;
+  -moz-transition: width 1s ease-out;
+  -o-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  overflow: hidden;
+  max-height: 70%;
+}
+
+#logo:hover>.icons {
+  width: fit-content;
+}
+
+#facebook {
+  padding-left: 8px;
+  padding-right: 5px;
+}
+
+#twitter {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#discord {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#paypal {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#salsa {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  height: 80px;
+  width: 40px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+#akari {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  height: 80px;
+  width: 40px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+#footer {
+  display: flex;
+  height: 10%;
+}
+
+#footer p {
+  width: 75%;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  justify-content: stretch;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 14px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#root {
+  z-index: 3;
+}
+
+#logo2 {
+  height: 3em;
+}
+
+#element {
+  height: 3em;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+}
+
+#info .row {
+  display: flex;
+  flex-direction: row;
+}
+
+#info .row>div:first-child {
+  width: 96px;
+}
+
+#info .row>div:last-child {
+  flex: 1;
+  border-left: 1px solid white;
+  padding-left: 42px;
+  text-decoration: none;
+}
+
+.modal {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.button {
+  background-color: #FFF;
+}
+
+.modal-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #202124;
+  opacity: 0.9;
+}
+
+.box {
+  padding: 100px;
+  background-color: #202124;
+  z-index: 1;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.modal-content {
+  color: white;
+  font-family: 'Open Sans', serif;
+}
+
+#videoContainer {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+  height: 75%;
+}
+
+video#mainVideo {
+  max-width: 100%;
+  max-height: calc(100vh - 72px);
+  height: 100%;
+}
+
+.subIcon {
+  height: 50px;
+  width: 50px;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}

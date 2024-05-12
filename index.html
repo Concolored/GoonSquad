@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!--TheBitLink arregló este código para que no diera tanto cáncer, pero de todas formas el que se lo tome en serio tiene problemas mentales-->
+<!--Cocolor lo usurpo y volvio mierda de nuevo pa que funcione en cloudfire -->
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <link rel="shortcut icon" href="hinacry.png" type="image/x-icon" />
+  <title>Crying Emoji Goon Squad</title>
+  <meta property="og:title" content="[vimas]" />
+  <meta property="og:description" content="Omnia vincit amor" />
+  <meta property="og:url" content="https://goonsquad.quest/" />
+  <meta property="og:image" content="https://www.goonsquad.quest/thumbnail.png" />
+  <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <meta name="keywords"
+    content="idolmaster, goon, squad, anime, cute, funny, cryingemoji, dolar, venezuela, memes, videos, graciosos, jokes, moe">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container" id="app">
+    <div id="root">
+      <transition name="fade">
+        <modal v-if="showModal" @close="showModal = false">
+          <div id="info">
+            <div v-if="currentVideo.Name" class="row">
+              <div>Video</div>
+              <div>{{ currentVideo.Name }}</div>
+            </div>
+            <div v-if="currentVideo.Anime" class="row">
+              <div>Anime</div>
+              <div>{{ currentVideo.Anime }}</div>
+            </div>
+            <div v-if="currentVideo.Movie" class="row">
+              <div>Película</div>
+              <div>{{ currentVideo.Movie }}</div>
+            </div>
+            <div v-if="currentVideo.Music" class="row">
+              <div>Música</div>
+              <div>{{ currentVideo.Music }}</div>
+            </div>
+            <div v-if="currentVideo.Sauce" class="row">
+              <div>Salsa</div>
+              <div>
+                <a target="_blank" v-bind:href="currentVideo.Sauce" rel="noopener noreferrer">Link</a>
+              </div>
+            </div>
+          </div>
+        </modal>
+      </transition>
+    </div>
+    <div id="header">
+      <div id="logo" @mouseover="openLogo" @mouseleave="closeLogo" ref="logobox">
+        <img id="logo2" src="logoVimas1.PNG"></img>
+        <div class="icons" ref="iconos">
+          <a href="https://www.facebook.com">
+            <img id=facebook src="facebook logo.png"></img>
+          </a>
+          <a href="https://twitter.com/">
+            <img id=twitter src="twitter logo.png"></img>
+          </a>
+          <a href="https://discord.gg/">
+            <img id=discord src="discord logo.png"></img>
+          </a>
+          <a href="https://www.paypal.me/">
+            <img id=paypal src="paypal logo.png"></img>
+          </a>
+        </div>
+        <div class="scroll">
+          <img id="element" src="logoVimas2.PNG"></img>
+        </div>
+      </div>
+    </div>
+    <div id="videoContainer">
+      <video controls id="mainVideo" :src="currentVideo.Video" @ended="randomVideo" autoplay muted />
+    </div>
+    <div id="footer">
+      <a target="_blank" href="https://www.youtube.com/watch?v=tq_lBdBZ_-Q" rel="noopener noreferrer">
+        <img id="akari" src="akariDance.gif" attributes="#" />
+      </a>
+      <p>
+        El contenido de ésta página pertenece a sus creadores y productores a menos que se especifique lo contrario.
+        También puede haber contenido NSFW. De haber algún problema, no dude en gaslightear.
+      </p>
+      <input id="salsa" type="image" src="salsa.png" @click="showModal=true"></input>
+    </div>
+  </div>
+  <script type="text/javascript" src="scripts/videos.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
